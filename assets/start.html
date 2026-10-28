@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Virel Home</title>
+<style>
+:root{--accent:#8b5cf6;--accent2:#c4b5fd;--text:#f7f3ff;--muted:#a99fba;--panel:rgba(35,27,51,.72);--line:rgba(196,181,253,.14)}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Segoe UI,Inter,Arial,sans-serif;color:var(--text)}
+body{min-height:100vh;display:flex;align-items:center;justify-content:center;overflow-x:hidden;background:radial-gradient(ellipse at 18% 15%,rgba(111,55,201,.24),transparent 38%),radial-gradient(ellipse at 85% 78%,rgba(75,42,153,.25),transparent 35%),linear-gradient(135deg,#15111f 0%,#191326 54%,#120f1b 100%);padding:36px 20px}
+.orb{display:none}
+main{position:relative;width:min(760px,100%);text-align:center;margin:auto}
+.logo{margin:0 auto 18px;width:66px;height:66px;border-radius:21px;display:grid;place-items:center;background:linear-gradient(145deg,#a78bfa,#6d28d9);box-shadow:0 14px 42px rgba(139,92,246,.25),inset 0 1px 0 rgba(255,255,255,.32);font-size:32px;font-weight:800;letter-spacing:-3px;color:white}
+h1{font-size:clamp(40px,7vw,60px);letter-spacing:-2.6px;font-weight:750;margin:0;line-height:1.06}h1 span{background:linear-gradient(100deg,#fff 10%,#c4b5fd 58%,#a78bfa);-webkit-background-clip:text;background-clip:text;color:transparent}.tagline{font-size:15px;color:var(--muted);margin:15px 0 30px;letter-spacing:.2px}
+.search{height:62px;max-width:650px;margin:0 auto;display:flex;align-items:center;gap:12px;padding:7px 8px 7px 18px;border:1px solid rgba(196,181,253,.19);border-radius:18px;background:rgba(35,27,51,.8);box-shadow:0 12px 35px rgba(0,0,0,.18),inset 0 1px 0 rgba(255,255,255,.025)}.search:focus-within{border-color:rgba(167,139,250,.72);box-shadow:0 0 0 2px rgba(139,92,246,.12),0 12px 35px rgba(0,0,0,.18)}.search svg{color:#b9a3ec;flex-shrink:0}.search input{flex:1;min-width:0;background:transparent;border:0;outline:0;color:var(--text);font:inherit;font-size:15px}.search input::placeholder{color:#8d829f}.search button{height:44px;width:48px;border:0;border-radius:13px;background:linear-gradient(135deg,#9b72fc,#7c3aed);color:#fff;font-size:19px;cursor:pointer;box-shadow:0 4px 12px rgba(124,58,237,.18)}.search button:hover{background:#8b5cf6}
+.section{max-width:650px;margin:32px auto 0;text-align:left}.section-head{font-size:11px;font-weight:700;letter-spacing:1.7px;color:#9487a8;text-transform:uppercase;margin:0 0 13px 6px}.links{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.link{padding:17px 10px 14px;display:flex;align-items:center;flex-direction:column;gap:11px;text-decoration:none;color:#e8e0f5;border:1px solid var(--line);border-radius:16px;background:rgba(32,25,46,.9)}.link:hover{border-color:rgba(167,139,250,.5);background:#36274e}.glyph{width:39px;height:39px;border-radius:13px;display:grid;place-items:center;font-size:16px;font-weight:700;color:#f9f6ff;background:linear-gradient(145deg,#4c3374,#2d2144);border:1px solid rgba(196,181,253,.14)}.glyph.red{background:linear-gradient(145deg,#a92e52,#5a1d3b)}.glyph.blue{background:linear-gradient(145deg,#2e70b5,#27375f)}.glyph.green{background:linear-gradient(145deg,#25806a,#234b48)}.glyph.gold{background:linear-gradient(145deg,#9c7139,#584127)}.link span:last-child{font-size:12px;color:#c7badb}
+.footer{margin-top:35px;font-size:11px;letter-spacing:1.25px;color:#62586f}.footer b{color:#9e83da;font-weight:600}
+@media(max-width:520px){.links{grid-template-columns:repeat(2,minmax(0,1fr))}.search{height:58px}.section{margin-top:25px}.link{flex-direction:row;justify-content:flex-start;padding:12px}.glyph{width:34px;height:34px}}
+</style>
+</head>
+<body>
+<main>
+  <div class="logo" aria-hidden="true">V.</div>
+  <h1><span>Virel</span></h1>
+  <p class="tagline">A little more violet. A little more yours.</p>
+  <form class="search" id="search" autocomplete="off">
+    <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 4.5 4.5"></path></svg>
+    <input id="q" name="q" type="text" placeholder="Search the web or enter a question…" aria-label="Search the web" autofocus>
+    <button aria-label="Search" type="submit">↗</button>
+  </form>
+  <section class="section">
+    <p class="section-head">Quick access</p>
+    <div class="links">
+      <a class="link" href="https://www.youtube.com/"><span class="glyph red">▶</span><span>YouTube</span></a>
+      <a class="link" href="https://github.com/"><span class="glyph">⌘</span><span>GitHub</span></a>
+      <a class="link" href="https://www.wikipedia.org/"><span class="glyph blue">W</span><span>Wikipedia</span></a>
+      <a class="link" href="https://www.google.com/"><span class="glyph green">G</span><span>Google</span></a>
+    </div>
+  </section>
+  <div class="footer">MADE WITH <b>VIOLET</b> · VIREL BROWSER</div>
+</main>
+<script>
+const form=document.getElementById('search'), input=document.getElementById('q');
+form.addEventListener('submit',function(e){e.preventDefault();const q=input.value.trim();if(!q)return;const engine=new URLSearchParams(window.location.search).get('engine')||'Google';const urls={'Google':'https://www.google.com/search?q=','DuckDuckGo':'https://duckduckgo.com/?q=','Bing':'https://www.bing.com/search?q='};window.location.href=(urls[engine]||urls.Google)+encodeURIComponent(q)});
+</script>
+</body></html>

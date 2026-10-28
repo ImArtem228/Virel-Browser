@@ -1,0 +1,5 @@
+Optional: build a standalone Windows app
+
+Run build_exe.bat after the normal dependencies have been installed. It installs PyInstaller and attempts to make a folder-based bundle in dist\VirelBrowser. Qt WebEngine is a large runtime, so the output is expected to be much larger than the source ZIP. The build step has not been validated on this machine; if it fails, run the source version with run.bat instead.
+
+If RTSS treats python.exe as a game, run the packaged dist\VirelBrowser\VirelBrowser.exe instead and set only that executable profile to Application detection level: None. This hides/disables RTSS overlay hooking for that app profile; it does not affect other programs.
